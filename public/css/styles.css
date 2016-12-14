@@ -1,37 +1,86 @@
-/*
-Error: Invalid CSS after "...ort 'variables'": expected selector or at-rule, was "@import 'layout'"
-        on line 2 of sass/styles.scss
+.nav {
+  background-color: #DC143C;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  opacity: .5; }
 
-1: @import 'variables'
-2: @import 'layout'
-3: @import 'about'
-4: @import 'home'
-5: @import 'products'
-6: @import 'contact'
+.nav ul {
+  list-style-type: none;
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: white; }
 
-Backtrace:
-sass/styles.scss:2
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ort 'variables'\": expected selector or at-rule, was \"@import 'layout'\"\A         on line 2 of sass/styles.scss\A \A 1: @import 'variables'\A 2: @import 'layout'\A 3: @import 'about'\A 4: @import 'home'\A 5: @import 'products'\A 6: @import 'contact'"; }
+.nav li:first-child {
+  margin-left: 20px;
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 2.5em;
+  display: inline-block; }
+
+.nav li {
+  display: inline-block;
+  margin-left: 40px;
+  font-family: times; }
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  background-color: inherit; }
+
+.heroimage {
+  border-radius: 30px; }
+
+#pullquote {
+  font-family: sans-serif;
+  font-size: 26pt;
+  display: none; }
+
+.mainbody {
+  padding: 10px;
+  border: 5px;
+  border-radius: 30px;
+  font-family: serif;
+  margin: 10px; }
+
+.nav-bar__empty-space {
+  height: 60px; }
+
+.home-banner__container {
+  width: 90vw;
+  height: 30vh;
+  margin: 10px auto;
+  background-color: #8c2a07;
+  color: #a35706; }
+  .home-banner__container h1 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 5em;
+    text-align: center; }
+  .home-banner__container h2 {
+    font-size: 1.5em; }
+  .home-banner__container h3 {
+    font-size: 1.5em; }
+  .home-banner__container h2, .home-banner__container h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0 20px;
+    margin: 5px 30px;
+    float: right;
+    clear: right; }
+
+.home-content__container {
+  width: 85vw;
+  margin: 0 auto; }
+
+a {
+  color: #4286f4; }
+
+.contact-form {
+  position: relative;
+  top: 60px;
+  text-align: center; }
+
+.thankyou__message {
+  position: relative;
+  top: 65px;
+  text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
