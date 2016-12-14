@@ -47,7 +47,8 @@
   margin: 10px; }
 
 #ginger {
-  display: none; }
+  display: none;
+  border-radius: 25px; }
 
 #headerclear {
   height: 65px; }
