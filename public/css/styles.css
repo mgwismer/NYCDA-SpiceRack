@@ -1,3 +1,15 @@
+.home-banner__container {
+  width: 100vw;
+  height: 30vh;
+  margin: 0 auto;
+  background-color: #8c2a07;
+  color: #a35706; }
 
+.home-content__container {
+  width: 90vw;
+  margin: 0 auto; }
+
+a {
+  color: #4286f4; }
 
 /*# sourceMappingURL=styles.css.map */
