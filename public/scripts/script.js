@@ -1,0 +1,1 @@
+$("#pullquote").fadeIn()
