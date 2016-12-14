@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Ruge+Boogie');
+$logo-font: 'Ruge Boogie', cursive;
+$main-color: rgba(220, 20, 60, .5);
+
+.nav {
+	background-color: $main-color;
+	width: 100%;
+	position: fixed;
+	box-sizing: border-box;
+}
+
+
+.nav ul {
+	list-style-type: none;
+	margin-bottom: 0px;
+	text-decoration: none;
+	color: white;
+}
+
+.nav li:first-child {
+	margin-left: 20px;
+	font-family: $logo-font;
+	font-size: 2.5em;
+	display: inline-block;
+}
+
+.nav li {
+
+	display: inline-block;
+	margin-left: 40px;
+	font-family: times;
+}
+
+.nav li a {
+	color: white;
+	text-decoration: none;
+	background-color: inherit;
+	opacity: .7;
+}
+
+.nav li a:hover {
+	opacity: 1;
+}
+
+.nav li a:focus {
+	outline: none;
+}
+
+.s_box {
+	background-color: red;
+	height: 5px;
+	float: left;
+	width: 20%;
+	opacity: .5;
+}
+
+.small_box {
+	background-color: black;
+	height: 5px;
+	float: left;
+	width: 20%;
+	opacity: .5;
+}
