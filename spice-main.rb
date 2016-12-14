@@ -16,6 +16,7 @@ response = sg.client.mail._('send').post(request_body: mail.to_json)
 # display the response status code and body
 puts response.status_code
 puts response.body	
+
 get '/' do 
    erb :home	
 end
