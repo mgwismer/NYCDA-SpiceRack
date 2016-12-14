@@ -1,0 +1,34 @@
+.navstyle {
+	background-color: #DC143C;
+	width: 100%;
+	position: fixed;
+	box-sizing: border-box;
+	opacity: .5;
+}
+
+
+.navstyle ul {
+	list-style-type: none;
+	margin-bottom: 0px;
+	text-decoration: none;
+	color: white;
+}
+
+.navstyle li:first-child {
+	margin-left: 20px;
+	font-family: 'Ruge Boogie', cursive;
+	font-size: 2.5em;
+	display: inline-block;
+}
+
+.navstyle li {
+	display: inline-block;
+	margin-left: 40px;
+	font-family: times;
+}
+
+.navstyle li a {
+	color: white;
+	text-decoration: none;
+	background-color: inherit
+}
