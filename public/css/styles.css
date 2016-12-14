@@ -78,6 +78,11 @@ a {
   top: 60px;
   text-align: center; }
 
+.contact-form {
+  position: relative;
+  top: 60px;
+  text-align: center; }
+
 .thankyou__message {
   position: relative;
   top: 65px;
