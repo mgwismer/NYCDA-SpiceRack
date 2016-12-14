@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Ruge+Boogie');
 
-.nav {
+.div {
 	background-color: #DC143C;
 	width: 100%;
 	position: fixed;
@@ -8,28 +9,30 @@
 }
 
 
-.nav ul {
+.div ul {
 	list-style-type: none;
 	margin-bottom: 0px;
 	text-decoration: none;
 	color: white;
 }
 
-.nav li:first-child {
+.div li:first-child {
 	margin-left: 20px;
 	font-family: 'Ruge Boogie', cursive;
 	font-size: 2.5em;
 	display: inline-block;
 }
 
-.nav li {
+.div li {
 	display: inline-block;
 	margin-left: 40px;
 	font-family: times;
 }
 
-.nav li a {
+.div li a {
 	color: white;
 	text-decoration: none;
-	background-color: inherit;
+	background-color: inherit
 }
+
+

@@ -1,46 +1,57 @@
-.nav {
+@import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
+@import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
+.div {
   background-color: #DC143C;
   width: 100%;
   position: fixed;
   box-sizing: border-box;
   opacity: .5; }
 
-.nav ul {
+.div ul {
   list-style-type: none;
   margin-bottom: 0px;
   text-decoration: none;
   color: white; }
 
-.nav li:first-child {
+.div li:first-child {
   margin-left: 20px;
   font-family: 'Ruge Boogie', cursive;
   font-size: 2.5em;
   display: inline-block; }
 
-.nav li {
+.div li {
   display: inline-block;
   margin-left: 40px;
   font-family: times; }
 
-.nav li a {
+.div li a {
   color: white;
   text-decoration: none;
   background-color: inherit; }
 
-.heroimage {
-  border-radius: 30px; }
+#quotebox {
+  margin: 10px; }
 
 #pullquote {
-  font-family: sans-serif;
+  font-family: 'Ruge Boogie', cursive;
   font-size: 26pt;
   display: none; }
 
-.mainbody {
+#mainbody {
   padding: 10px;
-  border: 5px;
+  border-style: solid;
+  border-color: rgba(255, 0, 0, 0.5);
+  border-width: 1px;
   border-radius: 30px;
   font-family: serif;
   margin: 10px; }
+
+#ginger {
+  display: none;
+  border-radius: 25px; }
+
+#headerclear {
+  height: 65px; }
 
 .nav-bar__empty-space {
   height: 60px; }
