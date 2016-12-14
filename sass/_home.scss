@@ -4,9 +4,10 @@
 
 .home-banner__container {
 	width: 90vw;
-	height: 30vh;
+	height: 25vh;
 	margin: 10px auto;
 	background-color: $darkred;
+	border-radius: 5px;
 	color: $orange-brown;
 
 	h1 {
@@ -39,8 +40,20 @@
 	
 	img {
 		float: left;
+		width: 50vw;
+		margin-right: 10px;
 	}
+
 }
+
+// .home-content__spice-lady-img {
+// 		width: 200px;
+// 		height: 500px;
+// 		float: left;
+// 		background-image: url('images/home/spice-lady.jpeg');
+// 		background-repeat: no-repeat;
+// 		background-size: cover;
+// 	}
 
 a {
 	color: #4286f4;

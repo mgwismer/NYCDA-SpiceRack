@@ -47,9 +47,10 @@
 
 .home-banner__container {
   width: 90vw;
-  height: 30vh;
+  height: 25vh;
   margin: 10px auto;
   background-color: #8c2a07;
+  border-radius: 5px;
   color: #a35706; }
   .home-banner__container h1 {
     font-family: 'Aref Ruqaa', serif;
@@ -70,7 +71,9 @@
   width: 90vw;
   margin: 0 auto; }
   .home-content__container img {
-    float: left; }
+    float: left;
+    width: 50vw;
+    margin-right: 10px; }
 
 a {
   color: #4286f4; }
