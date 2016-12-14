@@ -58,4 +58,14 @@
 a {
   color: #4286f4; }
 
+.contact-form {
+  position: relative;
+  top: 60px;
+  text-align: center; }
+
+.thankyou__message {
+  position: relative;
+  top: 65px;
+  text-align: center; }
+
 /*# sourceMappingURL=styles.css.map */
