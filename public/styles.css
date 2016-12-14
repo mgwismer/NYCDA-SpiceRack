@@ -29,10 +29,14 @@
 
 .small_box {
   color: red;
-  height: 5px; }
+  height: 5px;
+  width: 20%;
+  float: left; }
 
 .s_box {
   color: black;
-  height: 5px; }
+  height: 5px;
+  width: 20%;
+  float: left; }
 
 /*# sourceMappingURL=styles.css.map */
