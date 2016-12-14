@@ -1,4 +1,4 @@
-.navstyle {
+.nav {
 	background-color: #DC143C;
 	width: 100%;
 	position: fixed;
@@ -7,42 +7,42 @@
 }
 
 
-.navstyle ul {
+.nav ul {
 	list-style-type: none;
 	margin-bottom: 0px;
 	text-decoration: none;
 	color: white;
 }
 
-.navstyle li:first-child {
+.nav li:first-child {
 	margin-left: 20px;
 	font-family: 'Ruge Boogie', cursive;
 	font-size: 2.5em;
 	display: inline-block;
 }
 
-.navstyle li {
+.nav li {
 	display: inline-block;
 	margin-left: 40px;
 	font-family: times;
 }
 
-.navstyle li a {
+.nav li a {
 	color: white;
 	text-decoration: none;
 	background-color: inherit
 }
 
-.small_box {
-	color: red;
+.s_box {
+	background-color: red;
 	height: 5px;
-	width: 20%;
 	float: left;
+	width: 20%;
 }
 
-.s_box {
-	color: black;
+.small_box {
+	background-color: black;
 	height: 5px;
-	width: 20%;
 	float: left;
+	width: 20%;
 }
