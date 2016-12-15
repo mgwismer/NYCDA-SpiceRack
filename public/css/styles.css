@@ -20,25 +20,32 @@
 .nav li {
   display: inline-block;
   margin-left: 40px;
-  font-family: times; }
+  font-family: times;
+  cursor: pointer;
+  opacity: .7; }
 
 .nav li a {
   color: white;
   text-decoration: none;
-  background-color: inherit;
-  opacity: .7; }
+  background-color: inherit; }
 
-.nav li a:hover {
+.nav li:hover {
   opacity: 1; }
 
-.nav li a:focus {
+.nav li:focus {
   outline: none; }
 
+.glyphicon:hover {
+  opacity: 1; }
+
 .dropdown_shop_cart {
-  display: none;
-  height: 100px;
-  width: 100px;
-  position: absolute; }
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  border: 1px solid black;
+  z-index: 100;
+  display: none; }
 
 .s_box {
   background-color: red;
@@ -62,21 +69,13 @@
 
 .footer p {
   color: white;
-  display: inline-block;
-  opacity: .5; }
+  display: inline-block; }
 
 .spice_lady {
   width: 30px;
   height: 30px;
   margin-right: 40px;
   margin-top: 2px;
-  display: inline-block;
-  opacity: .5; }
-
-.footer p:hover {
-  opacity: 1; }
-
-.spice_lady:hover {
-  opacity: 1; }
+  display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */

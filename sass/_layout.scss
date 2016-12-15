@@ -10,7 +10,6 @@ $font-color-header-footer: white;
 	box-sizing: border-box;
 }
 
-
 .nav ul {
 	list-style-type: none;
 	margin-bottom: 0px;
@@ -29,6 +28,8 @@ $font-color-header-footer: white;
 	display: inline-block;
 	margin-left: 40px;
 	font-family: times;
+	cursor: pointer;
+	opacity: .7;
 }
 
 
@@ -36,22 +37,28 @@ $font-color-header-footer: white;
 	color: white;
 	text-decoration: none;
 	background-color: inherit;
-	opacity: .7;
 }
 
-.nav li a:hover {
+.nav li:hover {
 	opacity: 1;
 }
 
-.nav li a:focus {
+.nav li:focus {
 	outline: none;
 }
 
+.glyphicon:hover {
+	opacity: 1;
+}
+
 .dropdown_shop_cart {
-	display: none;
-	height: 100px;
-	width: 100px;
+	height: 200px;
+	width: 200px;
+	background-color: white;
 	position: absolute;
+	border: 1px solid black;
+	z-index: 100;
+	display: none;
 }
 
 .s_box {
@@ -81,7 +88,6 @@ $font-color-header-footer: white;
 .footer p {
 	color: $font-color-header-footer;
 	display: inline-block;
-	opacity: .5;
 }
 
 
@@ -91,14 +97,6 @@ $font-color-header-footer: white;
 	margin-right: 40px;
 	margin-top: 2px;
 	display: inline-block;
-	opacity: .5;
 }
 
 
-.footer p:hover {
-	opacity: 1;
-}
-
-.spice_lady:hover {
-	opacity: 1;
-}
