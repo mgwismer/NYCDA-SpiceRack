@@ -22,6 +22,7 @@ $font-color-header-footer: white;
 	font-family: $logo-font;
 	font-size: 2.5em;
 	display: inline-block;
+	opacity: .7;
 }
 
 .nav li {
@@ -29,7 +30,6 @@ $font-color-header-footer: white;
 	margin-left: 40px;
 	font-family: times;
 	cursor: pointer;
-	opacity: .7;
 }
 
 
@@ -37,6 +37,7 @@ $font-color-header-footer: white;
 	color: white;
 	text-decoration: none;
 	background-color: inherit;
+	opacity: .7;
 }
 
 .nav li:hover {
@@ -45,6 +46,15 @@ $font-color-header-footer: white;
 
 .nav li:focus {
 	outline: none;
+}
+
+.nav li a:hover {
+	opacity: 1;
+}
+
+.glyphicon {
+	font-size: 20px;
+	opacity: .7;
 }
 
 .glyphicon:hover {
@@ -56,9 +66,10 @@ $font-color-header-footer: white;
 	width: 200px;
 	background-color: white;
 	position: absolute;
-	border: 1px solid black;
+	border: 1px solid rgba(220, 20, 60, .5);
 	z-index: 100;
 	display: none;
+	opacity: 1;
 }
 
 .s_box {

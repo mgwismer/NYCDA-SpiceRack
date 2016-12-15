@@ -15,25 +15,33 @@
   margin-left: 20px;
   font-family: "Ruge Boogie", cursive;
   font-size: 2.5em;
-  display: inline-block; }
+  display: inline-block;
+  opacity: .7; }
 
 .nav li {
   display: inline-block;
   margin-left: 40px;
   font-family: times;
-  cursor: pointer;
-  opacity: .7; }
+  cursor: pointer; }
 
 .nav li a {
   color: white;
   text-decoration: none;
-  background-color: inherit; }
+  background-color: inherit;
+  opacity: .7; }
 
 .nav li:hover {
   opacity: 1; }
 
 .nav li:focus {
   outline: none; }
+
+.nav li a:hover {
+  opacity: 1; }
+
+.glyphicon {
+  font-size: 20px;
+  opacity: .7; }
 
 .glyphicon:hover {
   opacity: 1; }
@@ -43,9 +51,10 @@
   width: 200px;
   background-color: white;
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid rgba(220, 20, 60, 0.5);
   z-index: 100;
-  display: none; }
+  display: none;
+  opacity: 1; }
 
 .s_box {
   background-color: red;
