@@ -47,6 +47,13 @@ $font-color-header-footer: white;
 	outline: none;
 }
 
+.dropdown_shop_cart {
+	display: none;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+}
+
 .s_box {
 	background-color: red;
 	height: 5px;
@@ -69,28 +76,29 @@ $font-color-header-footer: white;
 	position: absolute;
 	background-color: $main-color;
 	width: 100%;
-	height: 50px;
 }
 
 .footer p {
-	margin-top: 15px;
 	color: $font-color-header-footer;
-	opacity: .7
+	display: inline-block;
+	opacity: .5;
 }
 
 
 .spice_lady {
-	background-image: url("http://travel.nationalgeographic.com/u/TvyamNb-BivtNwcoxtkc5xGBuGkIMh_nj4UJHQKuoXT3Pxy1faorqy-sO7b9ob_cMmbI4CBh54I4aw/");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	height: 30px;
 	width: 30px;
-	float: left;
-	margin-top: 5px;
-	absolute: position;
-	margin-left: 150px;
+	height: 30px;
+	margin-right: 40px;
+	margin-top: 2px;
+	display: inline-block;
+	opacity: .5;
 }
 
+
 .footer p:hover {
+	opacity: 1;
+}
+
+.spice_lady:hover {
 	opacity: 1;
 }
