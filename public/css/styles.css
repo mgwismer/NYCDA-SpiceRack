@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
-@import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
+
+body {
+  height: 100%; }
+
 .nav {
   background-color: rgba(220, 20, 60, 0.5);
   width: 100%;
   position: fixed;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 100; }
 
 .nav ul {
   list-style-type: none;
@@ -16,12 +20,14 @@
   margin-left: 20px;
   font-family: "Ruge Boogie", cursive;
   font-size: 2.5em;
-  display: inline-block; }
+  display: inline-block;
+  opacity: .7; }
 
 .nav li {
   display: inline-block;
   margin-left: 40px;
-  font-family: times; }
+  font-family: times;
+  cursor: pointer; }
 
 .nav li a {
   color: white;
@@ -29,11 +35,31 @@
   background-color: inherit;
   opacity: .7; }
 
+.nav li:hover {
+  opacity: 1; }
+
+.nav li:focus {
+  outline: none; }
+
 .nav li a:hover {
   opacity: 1; }
 
-.nav li a:focus {
-  outline: none; }
+.glyphicon {
+  font-size: 20px;
+  opacity: .7; }
+
+.glyphicon:hover {
+  opacity: 1; }
+
+.dropdown_shop_cart {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  border: 1px solid rgba(220, 20, 60, 0.5);
+  z-index: 100;
+  display: none;
+  opacity: 1; }
 
 .s_box {
   background-color: red;
@@ -48,6 +74,7 @@
   float: left;
   width: 20%;
   opacity: .5; }
+
 
 #quotebox {
   margin: 10px; }
@@ -118,5 +145,43 @@ a {
   position: relative;
   top: 65px;
   text-align: center; }
+=======
+.scroll_bar {
+  height: 20px;
+  width: 140px;
+  background-color: rgba(220, 20, 60, 0.5);
+  display: block;
+  border-radius: 25px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
+  margin: 0 auto; }
+
+.scroll_bar p {
+  color: white;
+  font-family: times;
+  letter-spacing: 2px; }
+
+.footer {
+  background-color: rgba(220, 20, 60, 0.5);
+  border-radius: 5px;
+  display: none;
+  width: 100%; }
+
+.footer p {
+  color: white;
+  display: inline-block; }
+
+.spice_lady {
+  width: 30px;
+  height: 30px;
+  margin-right: 40px;
+  margin-top: 2px;
+  display: inline-block; }
+
 
 /*# sourceMappingURL=styles.css.map */
