@@ -1,4 +1,15 @@
-$document.ready(function () {
+$(document).ready(function() {
+
+/*$('.footer')*/
+
+$('.scroll_bar').mouseenter(function() {
+	$('.scroll_bar').css('display', 'none');
+	$('.footer').slideDown(500, function() {		
+	});
+});
+
+
+});
 
 
 
@@ -19,17 +30,3 @@ function dropDownMenu () {
 }
 
 var mainPage = new dropDownMenu();
-
-
-
-$('.footer')
-
-
-
-})
-
-
-
-/*document.getElementsByClassName('dropdown_shop_cart').addEventListener('click', function() {
-	document.getElementsByClassName('glyphicon glyphicon-shopping-cart').style.display = 'block';
-})*/
