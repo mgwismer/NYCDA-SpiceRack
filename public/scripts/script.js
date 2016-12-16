@@ -18,7 +18,6 @@ function dropDownMenu () {
 	this.clickCounter = 0
 
 	this.clickDown = function () {
-			console.log(this.clickCounter);
 		if (this.clickCounter % 2 === 0) {
 			document.getElementsByClassName('dropdown_shop_cart')[0].style.display = 'block';
 		}
