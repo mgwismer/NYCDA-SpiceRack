@@ -1,11 +1,10 @@
 
 $(document).ready(function(){
+
     $('#pullquote').fadeIn(5000);
 
     $('#ginger').fadeIn(8000);
 
-
-/*$('.footer')*/
 
 $('.scroll_bar').mouseenter(function() {
 	$('.scroll_bar').css('display', 'none');
