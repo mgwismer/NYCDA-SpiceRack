@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-$(document).ready(function(){
-    $('#pullquote').fadeIn(5000);
-});
 
 $(document).ready(function(){
+    $('#pullquote').fadeIn(5000);
+
     $('#ginger').fadeIn(8000);
-});
-=======
-$(document).ready(function() {
+
 
 /*$('.footer')*/
 
@@ -38,4 +34,4 @@ function dropDownMenu () {
 }
 
 var mainPage = new dropDownMenu();
->>>>>>> layout
+
