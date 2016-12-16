@@ -3,6 +3,10 @@ $logo-font: 'Ruge Boogie', cursive;
 $main-color: rgba(220, 20, 60, .5);
 $font-color-header-footer: white;
 
+body {
+	height: 100%;
+}
+
 .nav {
 	background-color: $main-color;
 	width: 100%;
@@ -67,7 +71,7 @@ $font-color-header-footer: white;
 	width: 200px;
 	background-color: white;
 	position: absolute;
-	border: 1px solid rgba(220, 20, 60, .5);
+	border: 1px solid $main-color;
 	z-index: 100;
 	display: none;
 	opacity: 1;
@@ -94,12 +98,15 @@ $font-color-header-footer: white;
 	width: 140px;
 	background-color: $main-color;
 	display: block;
-	position: absolute;
-	bottom: 0;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
 	border-radius: 25px;
+	position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+    margin: 0 auto;
 }
 
 .scroll_bar p {
@@ -109,12 +116,10 @@ $font-color-header-footer: white;
 }
 
 .footer {
-	bottom: 0;
-	position: absolute;
 	background-color: $main-color;
-	width: 100%;
 	border-radius: 5px;
 	display: none;
+	width: 100%;
 }
 
 .footer p {
