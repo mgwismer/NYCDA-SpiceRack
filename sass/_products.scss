@@ -17,31 +17,19 @@
     .prev{
       left: -33%;
     }
-    // @media all and (transform-3d), (-webkit-transform-3d) {
-    //   > .item{
-    //     // use your favourite prefixer here
-    //     transition: 500ms ease-in-out all;
-    //     backface-visibility: visible;
-    //     transform: none!important;
-    //   }
-    // }
   }
-  // .carousel-control{
-  //   &.left, &.right{
-  //     background-image: none;
-  //   }
-  // }
 }
 
 //attempt to take side borders off of carousel
 .carousel-control {
   text-shadow: none;
   opacity: 1;
-  filter: alpha(opacity=100)
+  filter: alpha(opacity=100);
 }
+
 .carousel-control.left, .carousel-control.right {
     background-image: none !important;
-    //filter: progid: none !important;
+    // filter: progid: none !important;
 }
 
 .spacer-div {
