@@ -1,0 +1,24 @@
+.table-container {
+	width: 90vw;
+	// height: 30vh;
+	margin: 10px auto;
+}
+.order-table {
+	width: 70%;
+	margin: 0 auto;
+	.table-cat {
+	   border: 1px solid black;
+    }
+    td {
+      font-size: 2em;
+      font-family: $fontfamily;
+    }
+}
+
+.table-head {
+    background-color: $darkred;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    font-size: 2em;
+}
