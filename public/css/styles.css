@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
-
+@import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
 body {
   height: 100%; }
 
@@ -131,9 +131,10 @@ body {
 
 #ginger {
   display: none;
-  border-radius: 25px; }
+  border-radius: 25px;
+  position: fixed; }
 
-#headerclear {
+.headerclear {
   height: 65px; }
 
 .nav-bar__empty-space {
@@ -170,12 +171,29 @@ a {
 .contact-form {
   position: relative;
   top: 60px;
-  text-align: center; }
+  background-color: #8c2a07;
+  margin: 5px;
+  padding: 10px; }
 
-.contact-form {
-  position: relative;
-  top: 60px;
-  text-align: center; }
+#pullquote2 {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none;
+  margin: 10px; }
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+textarea {
+  height: 100px;
+  width: 75%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
 
 .thankyou__message {
   position: relative;

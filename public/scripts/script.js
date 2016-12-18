@@ -1,9 +1,9 @@
-
 $(document).ready(function(){
 
     $('#pullquote').fadeIn(5000);
-
     $('#ginger').fadeIn(8000);
+	$('#pullquote2').fadeIn(5000);
+
 
 
 $('.scroll_bar').mouseenter(function() {
