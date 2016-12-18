@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
-
+@import url("https://fonts.googleapis.com/css?family=Ruge+Boogie");
 body {
   height: 100%; }
 
@@ -75,77 +75,6 @@ body {
   width: 20%;
   opacity: .5; }
 
-
-#quotebox {
-  margin: 10px; }
-
-#pullquote {
-  font-family: 'Ruge Boogie', cursive;
-  font-size: 26pt;
-  display: none; }
-
-#mainbody {
-  padding: 10px;
-  border-style: solid;
-  border-color: rgba(255, 0, 0, 0.5);
-  border-width: 1px;
-  border-radius: 30px;
-  font-family: serif;
-  margin: 10px; }
-
-#ginger {
-  display: none;
-  border-radius: 25px; }
-
-#headerclear {
-  height: 65px; }
-
-.nav-bar__empty-space {
-  height: 60px; }
-
-.home-banner__container {
-  width: 90vw;
-  height: 30vh;
-  margin: 10px auto;
-  background-color: #8c2a07;
-  color: #a35706; }
-  .home-banner__container h1 {
-    font-family: 'Aref Ruqaa', serif;
-    font-size: 5em;
-    text-align: center; }
-  .home-banner__container h2 {
-    font-size: 1.5em; }
-  .home-banner__container h3 {
-    font-size: 1.5em; }
-  .home-banner__container h2, .home-banner__container h3 {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    padding: 0 20px;
-    margin: 5px 30px;
-    float: right;
-    clear: right; }
-
-.home-content__container {
-  width: 85vw;
-  margin: 0 auto; }
-
-a {
-  color: #4286f4; }
-
-.contact-form {
-  position: relative;
-  top: 60px;
-  text-align: center; }
-
-.contact-form {
-  position: relative;
-  top: 60px;
-  text-align: center; }
-
-.thankyou__message {
-  position: relative;
-  top: 65px;
-  text-align: center; }
-=======
 .scroll_bar {
   height: 20px;
   width: 140px;
@@ -183,5 +112,117 @@ a {
   margin-top: 2px;
   display: inline-block; }
 
+#quotebox {
+  margin: 10px; }
+
+#pullquote {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none; }
+
+#mainbody {
+  padding: 10px;
+  border-style: solid;
+  border-color: rgba(255, 0, 0, 0.5);
+  border-width: 1px;
+  border-radius: 30px;
+  font-family: serif;
+  margin: 10px; }
+
+#ginger {
+  display: none;
+  border-radius: 25px;
+  position: fixed; }
+
+.headerclear {
+  height: 65px; }
+
+.nav-bar__empty-space {
+  height: 60px; }
+
+.home-banner__container {
+  width: 90vw;
+  height: 30vh;
+  margin: 10px auto;
+  background-color: #8c2a07;
+  color: #a35706; }
+  .home-banner__container h1 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 5em;
+    text-align: center; }
+  .home-banner__container h2 {
+    font-size: 1.5em; }
+  .home-banner__container h3 {
+    font-size: 1.5em; }
+  .home-banner__container h2, .home-banner__container h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0 20px;
+    margin: 5px 30px;
+    float: right;
+    clear: right; }
+
+.home-content__container {
+  width: 85vw;
+  margin: 0 auto; }
+
+a {
+  color: #4286f4; }
+
+.contact-form {
+  position: relative;
+  top: 60px;
+  background-color: #8c2a07;
+  margin: 5px;
+  padding: 10px; }
+
+#pullquote2 {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none;
+  margin: 10px; }
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+textarea {
+  height: 100px;
+  width: 75%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.contact-form {
+  position: relative;
+  top: 60px;
+  background-color: #8c2a07;
+  margin: 5px;
+  padding: 10px; }
+
+#pullquote2 {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none;
+  margin: 10px; }
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+textarea {
+  height: 100px;
+  width: 75%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.thankyou__message {
+  position: relative;
+  top: 65px;
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
