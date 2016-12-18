@@ -10,19 +10,34 @@ $(document).ready(function() {
      "Oregano2.jpg","tarragon.jpg"];
   var images_seeds = ["cumin1.jpg","fennel1.jpg","coriander1.jpg","mustard1.jpg",
      "peppercorn1.jpg","nutmeg1.jpg"];
-  
-  var myStore = new Store("SpiceRack");
-  myStore.startStore();
-  runCarousel();
-  startEventListeners();
-  console.log(myStore.inventory);
-  console.log(myStore.inventory.plantSpices);
-  console.log(myStore.cart);
+  var windowLoc = $(location).attr('pathname');
+  console.log(windowLoc);
+  switch(windowLoc){      
+  case "/products":
+    var myStore = new Store("SpiceRack");
+    myStore.startStore();
+    runCarousel();
+    startEventListeners();
+    // console.log(myStore.inventory);
+    console.log(myStore.inventory.plantSpices);
+    break;
+  case "/order":
+    myStore = new Store("order store");
+    cart = localStorage.getItem('cart');
+    myStore.cart = JSON.parse(cart);   
+    console.log(myStore) 
+    myStore.displayOrderSummary();
+
+    break;
+  }  
+ 
+
  
   function Store(name) {
     this.name = name;
     this.inventory = null;
     this.customers = [];
+    this.cart = null;
     this.orders = []; //this would be used when order submitted
     this.startStore = function() {
       this.cart = new Cart("NewCustomer");
@@ -33,7 +48,6 @@ $(document).ready(function() {
       this.inventory.addToSeedSpices(spices);
       this.inventory.makeTotalArray();
       this.makeProductPage(this.inventory.totalSpices);
-      this.displayOrderSummary(this.cart);
     }
 
     this.recordSpices = function(spiceType,priceType,imageType,type) {
@@ -48,9 +62,6 @@ $(document).ready(function() {
     this.makeProductPage = function(spices) {
       //parentDiv should be the inner Carousel
       var parentClass = $(".carousel-inner");
-      console.log("in product page");
-      console.log(parentClass);
-      console.log(spices);
       for (var j = 0; j < parentClass.length; j++) {
         parentDiv = parentClass[j];
         var spiceCat = spices[j];
@@ -91,21 +102,23 @@ $(document).ready(function() {
     this.addToOrders = function(order) {
       this.orders.push(order);
     }
-    this.displayOrderSummary = function(cart) {
-      var table = document.getElementsByClassName("order-table");
-      for (var i = 0; i < cart.numOrders; i++) {
-        var row = table.insertRow(i);
+
+    this.displayOrderSummary = function() {
+      var table = document.getElementsByClassName("order-table")[0];
+      console.log(table);
+      for (var i = 0; i < this.cart.numOrders; i++) {
+        var row = table.insertRow(i+1);
         var cell0 = row.insertCell(0);
-        cell0.innerText = cart.spiceOrders[i].name;
+        cell0.innerText = this.cart.spiceOrders[i].name;
         var cell1 = row.insertCell(1);
-        cell1.innerText = cart.spiceOrders[i].amount;
+        cell1.innerText = this.cart.spiceOrders[i].amount;
         var cell2 = row.insertCell(2);
-        cell2.innerText = cart.spiceOrders[i].price;
+        cell2.innerText = this.cart.spiceOrders[i].price;
         var cell3 = row.insertCell(3);
-        cell3.innerText = cart.spiceOrders[i].total;
+        cell3.innerText = this.cart.spiceOrders[i].total;
       }
       console.log("in order summary");
-      console.log(cart);
+      console.log(this.cart);
     }
   }
 
@@ -120,8 +133,8 @@ $(document).ready(function() {
     this.name = name;
     this.amount = amt;
     this.total = 0;
-    this.validAmount = function(amt) {
-      return ((amt > 1) && (amt < 100));
+    this.validAmount = function() {
+      return ((this.amount > 0) && (this.amount < 100));
     }
     this.total = function(price) {
       return price*this.amount;
@@ -158,14 +171,14 @@ $(document).ready(function() {
       console.log(this.totalSpices);
     }
     this.getSpiceByName = function(name) {
-      for (var i = 0; i < numPlant; i++) {
+      for (var i = 0; i < this.numPlant; i++) {
         if (this.plantSpices[i].name == name) {
-          return plantSpices[i];
+          return this.plantSpices[i];
         }
       }
-      for (var i = 0; i < numSeed; i++) {
+      for (var i = 0; i < this.numSeed; i++) {
         if (this.seedSpices[i].name == name) {
-          return seedSpices[i];
+          return this.seedSpices[i];
         }
       }
     }
@@ -179,9 +192,8 @@ $(document).ready(function() {
   function startEventListeners() {
     //Using event delegation. The listener is on the parent of the buttons
     var plantSpices = document.getElementsByClassName("carousel-inner")[0];
-    if (plantSpices) {
+    if (plantSpices) { //add listener only if div exists
       plantSpices.addEventListener("click", function(e1) {
-        console.log("button clicked");
         if (e1.target.type == "button") {
           addSpiceToCart(e1.target.id)
         }
@@ -190,7 +202,6 @@ $(document).ready(function() {
     var seedSpices = document.getElementsByClassName("carousel-inner")[1];
     if (seedSpices) {
       seedSpices.addEventListener("click", function(e2) {
-        console.log("button clicked");
         if (e2.target.type == "button") {
           addSpiceToCart(e2.target.id);
         }
@@ -201,19 +212,17 @@ $(document).ready(function() {
   function addSpiceToCart(spiceName) {
       var amt = $(".text-"+spiceName).val();
       var textf = document.getElementsByClassName("text-"+spiceName)[0];
-      console.log(textf);
-      console.log("text-"+spiceName);
-      console.log(spiceName);
-      console.log("Amount "+amt);
-      var newOrder = new SpiceOrder(spiceName,amt);
+      var newOrder = new SpiceOrder(spiceName,amt);     
       if (newOrder.validAmount()) {
         spicePrice = myStore.inventory.getSpiceByName(spiceName).price;
         newOrder.total = parseInt(spicePrice)*amt;
         myStore.cart.addToCart(newOrder);
+        console.log(myStore.cart);
+        localStorage.setItem('cart',JSON.stringify(myStore.cart));
       }
-      // else {
-      //    alert("Amount must be between 1 and 100");
-      // }
+      else {
+         alert("Amount must be between 1 and 100");
+      }
   }
 
   function runCarousel() {
