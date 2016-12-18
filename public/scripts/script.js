@@ -17,12 +17,15 @@ $(document).ready(function() {
   startEventListeners();
   console.log(myStore.inventory);
   console.log(myStore.inventory.plantSpices);
+  console.log(myStore.cart);
  
   function Store(name) {
     this.name = name;
     this.inventory = null;
     this.customers = [];
+    this.orders = []; //this would be used when order submitted
     this.startStore = function() {
+      this.cart = new Cart("NewCustomer");
       this.inventory = new Inventory();
       var spices = this.recordSpices(spices_plants,price_plants,images_plants,"plant");
       this.inventory.addToPlantSpices(spices);
@@ -30,6 +33,7 @@ $(document).ready(function() {
       this.inventory.addToSeedSpices(spices);
       this.inventory.makeTotalArray();
       this.makeProductPage(this.inventory.totalSpices);
+      this.displayOrderSummary(this.cart);
     }
 
     this.recordSpices = function(spiceType,priceType,imageType,type) {
@@ -74,15 +78,34 @@ $(document).ready(function() {
           var btnDiv = inDivSpice.appendChild(document.createElement("input"));
           btnDiv.type = "button";
           btnDiv.className = "btnDiv";
+          btnDiv.id = spiceCat[i].name;
           btnDiv.value = "Add to Cart";
           var textDiv = inDivSpice.appendChild(document.createElement("input"));
           textDiv.type = "text";
-          textDiv.value = "# of oz.";
-          textDiv.className = "textDiv";
+          textDiv.value = "enter amount";
+          textDiv.className = "textDiv text-"+spiceCat[i].name;
+          $("text-"+spiceCat[i].name).focus();
+          // textDiv.id = "text-"+spiceCat[i].name;
       }
     } 
-    this.addCustomer = function(customer) {
-      this.customers.push(customer);
+    this.addToOrders = function(order) {
+      this.orders.push(order);
+    }
+    this.displayOrderSummary = function(cart) {
+      var table = document.getElementsByClassName("order-table");
+      for (var i = 0; i < cart.numOrders; i++) {
+        var row = table.insertRow(i);
+        var cell0 = row.insertCell(0);
+        cell0.innerText = cart.spiceOrders[i].name;
+        var cell1 = row.insertCell(1);
+        cell1.innerText = cart.spiceOrders[i].amount;
+        var cell2 = row.insertCell(2);
+        cell2.innerText = cart.spiceOrders[i].price;
+        var cell3 = row.insertCell(3);
+        cell3.innerText = cart.spiceOrders[i].total;
+      }
+      console.log("in order summary");
+      console.log(cart);
     }
   }
 
@@ -91,6 +114,28 @@ $(document).ready(function() {
     this.price = price;
     this.type = type;
     this.jpgPhoto = image;
+  }
+
+  function SpiceOrder(name,amt) {
+    this.name = name;
+    this.amount = amt;
+    this.total = 0;
+    this.validAmount = function(amt) {
+      return ((amt > 1) && (amt < 100));
+    }
+    this.total = function(price) {
+      return price*this.amount;
+    }
+  }
+
+  function Cart(name) {
+    this.custID = name;
+    this.spiceOrders = [];
+    this.numOrders = 0;
+    this.addToCart = function(order) {
+      this.spiceOrders.push(order);
+      this.numOrders += 1;
+    }
   }
 
   function Inventory() {
@@ -112,6 +157,18 @@ $(document).ready(function() {
       this.totalSpices = [this.plantSpices, this.seedSpices]
       console.log(this.totalSpices);
     }
+    this.getSpiceByName = function(name) {
+      for (var i = 0; i < numPlant; i++) {
+        if (this.plantSpices[i].name == name) {
+          return plantSpices[i];
+        }
+      }
+      for (var i = 0; i < numSeed; i++) {
+        if (this.seedSpices[i].name == name) {
+          return seedSpices[i];
+        }
+      }
+    }
   }
   
   function Customer(idNum) {
@@ -119,29 +176,46 @@ $(document).ready(function() {
     this.cart = null;
   }
 
-  function Cart(name) {
-    this.name = name;
-    this.spices = [];
-    this.numItems = 0;
-    this.addToCart = function(spice) {
-       this.spices.push(spice);
-       this.numItems += 1;
-    }
-  }
-
   function startEventListeners() {
     //Using event delegation. The listener is on the parent of the buttons
     var plantSpices = document.getElementsByClassName("carousel-inner")[0];
-    plantSpices.addEventListener("click", function(e1) {
-      console.log("button clicked");
-      console.log(e1.target);
-    });
+    if (plantSpices) {
+      plantSpices.addEventListener("click", function(e1) {
+        console.log("button clicked");
+        if (e1.target.type == "button") {
+          addSpiceToCart(e1.target.id)
+        }
+      });
+    }
     var seedSpices = document.getElementsByClassName("carousel-inner")[1];
-    seedSpices.addEventListener("click", function(e2) {
-      console.log(e2.target);
-    });
+    if (seedSpices) {
+      seedSpices.addEventListener("click", function(e2) {
+        console.log("button clicked");
+        if (e2.target.type == "button") {
+          addSpiceToCart(e2.target.id);
+        }
+      });
+    }
   }
   
+  function addSpiceToCart(spiceName) {
+      var amt = $(".text-"+spiceName).val();
+      var textf = document.getElementsByClassName("text-"+spiceName)[0];
+      console.log(textf);
+      console.log("text-"+spiceName);
+      console.log(spiceName);
+      console.log("Amount "+amt);
+      var newOrder = new SpiceOrder(spiceName,amt);
+      if (newOrder.validAmount()) {
+        spicePrice = myStore.inventory.getSpiceByName(spiceName).price;
+        newOrder.total = parseInt(spicePrice)*amt;
+        myStore.cart.addToCart(newOrder);
+      }
+      // else {
+      //    alert("Amount must be between 1 and 100");
+      // }
+  }
+
   function runCarousel() {
     $('.multi-item-carousel').carousel({
      interval: false

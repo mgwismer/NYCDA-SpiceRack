@@ -56,7 +56,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 5px solid black;
+    border: 5px solid $orange-brown;
 }
 
 //move the carousel arrows off the pictures
@@ -69,6 +69,14 @@
     margin-right: 0;
 }
 
+.carousel-control {
+   height: 50px;
+   color: $darkred;
+}
+
+.textDiv {
+  color: gray;
+}
 // non-related styling:
 body{
   background: #333;

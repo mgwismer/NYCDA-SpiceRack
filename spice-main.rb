@@ -20,16 +20,24 @@ get '/' do
    erb :home	
 end
 
-get '/about' do
-   erb :about
-end
-
 get '/products' do
    erb :products
 end
 
+get '/about' do
+   erb :about
+end
+
 get '/contact' do
    erb :contact
+end
+
+get '/order' do
+   erb :order
+end
+
+get 'favicon.ico' do
+	"Hello world"
 end
 
 post '/thankyou' do
