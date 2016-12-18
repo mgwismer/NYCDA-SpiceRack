@@ -1,0 +1,30 @@
+.contact-form {
+	position: relative;
+	top: 60px;
+	background-color: $darkred;
+	margin: 5px;
+	padding: 10px;
+}
+
+#pullquote2 {
+	font-family: 'Ruge Boogie', cursive;
+	font-size: 26pt;
+	display: none;
+	margin: 10px;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+textarea {
+	height: 100px;
+	width: 75%;
+	padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

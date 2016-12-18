@@ -210,6 +210,12 @@ a {
   background-size: cover;
   border: 5px solid #a35706; }
 
+.item-spice p {
+  font-size: 1.5em;
+  font-family: "Aref Ruqaa";
+  width: 100%;
+  margin: 0 auto; }
+
 .carousel-control.left .glyphicon {
   left: 0;
   margin-left: -10px; }
@@ -223,7 +229,9 @@ a {
   color: #8c2a07; }
 
 .textDiv {
-  color: gray; }
+  color: grey;
+  width: 40px;
+  margin: 10px; }
 
 body {
   background: #333;
@@ -237,6 +245,32 @@ h1 {
   margin-bottom: 2em;
   text-shadow: 0px 2px 0px black; }
 
+.contact-form {
+  position: relative;
+  top: 60px;
+  background-color: #8c2a07;
+  margin: 5px;
+  padding: 10px; }
+
+#pullquote2 {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none;
+  margin: 10px; }
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+textarea {
+  height: 100px;
+  width: 75%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
 .table-container {
   width: 90vw;
   margin: 10px auto; }
@@ -246,11 +280,15 @@ h1 {
   margin: 0 auto; }
   .order-table .table-cat {
     border: 1px solid black; }
+  .order-table td {
+    font-size: 2em;
+    font-family: "Aref Ruqaa"; }
 
 .table-head {
   background-color: #8c2a07;
   color: white;
   text-align: left;
-  padding: 8px; }
+  padding: 8px;
+  font-size: 2em; }
 
 /*# sourceMappingURL=styles.css.map */

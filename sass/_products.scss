@@ -59,6 +59,12 @@
     border: 5px solid $orange-brown;
 }
 
+.item-spice p {
+  font-size: 1.5em;
+  font-family: $fontfamily;
+  width: 100%;
+  margin: 0 auto;
+}
 //move the carousel arrows off the pictures
 .carousel-control.left .glyphicon {
     left: 0;
@@ -75,7 +81,9 @@
 }
 
 .textDiv {
-  color: gray;
+  color: grey;
+  width: 40px;
+  margin: 10px;
 }
 // non-related styling:
 body{

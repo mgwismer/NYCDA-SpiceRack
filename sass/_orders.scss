@@ -9,6 +9,10 @@
 	.table-cat {
 	   border: 1px solid black;
     }
+    td {
+      font-size: 2em;
+      font-family: $fontfamily;
+    }
 }
 
 .table-head {
@@ -16,4 +20,5 @@
     color: white;
     text-align: left;
     padding: 8px;
+    font-size: 2em;
 }

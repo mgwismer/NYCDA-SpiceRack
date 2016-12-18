@@ -80,12 +80,12 @@ $(document).ready(function() {
           }
           //divSpice.innerText = spices[i].name;
           var inDivSpice = divSpice.appendChild(document.createElement("div"));
-          inDivSpice.className = "col-md-4";
+          inDivSpice.className = "col-md-4 item-spice";
           var imgDiv = inDivSpice.appendChild(document.createElement("img"));
           imgDiv.className = "img-responsive";
           imgDiv.src = "images/products/"+spiceCat[i].jpgPhoto;
           var pDiv = inDivSpice.appendChild(document.createElement("p"));
-          pDiv.innerText = spiceCat[i].name+"  "+spiceCat[i].price;
+          pDiv.innerText = spiceCat[i].name+":  $"+spiceCat[i].price;
           var btnDiv = inDivSpice.appendChild(document.createElement("input"));
           btnDiv.type = "button";
           btnDiv.className = "btnDiv";
@@ -106,17 +106,26 @@ $(document).ready(function() {
     this.displayOrderSummary = function() {
       var table = document.getElementsByClassName("order-table")[0];
       console.log(table);
+      var total = 0
       for (var i = 0; i < this.cart.numOrders; i++) {
         var row = table.insertRow(i+1);
         var cell0 = row.insertCell(0);
         cell0.innerText = this.cart.spiceOrders[i].name;
         var cell1 = row.insertCell(1);
-        cell1.innerText = this.cart.spiceOrders[i].amount;
+        cell1.innerText = this.cart.spiceOrders[i].amount+" oz";
         var cell2 = row.insertCell(2);
-        cell2.innerText = this.cart.spiceOrders[i].price;
+        cell2.innerText = "$"+this.cart.spiceOrders[i].price.toFixed(2);
         var cell3 = row.insertCell(3);
-        cell3.innerText = this.cart.spiceOrders[i].total;
+        cell3.innerText = "$"+this.cart.spiceOrders[i].total.toFixed(2);
+        total += this.cart.spiceOrders[i].total;
       }
+      var row = table.insertRow(this.cart.numOrders+1);
+      var cell0 = row.insertCell(0);
+      cell0.innerText = "Total";
+      var cell1 = row.insertCell(1);
+      var cell2 = row.insertCell(2);
+      var cell3 = row.insertCell(3);
+      cell3.innerText = "$"+total.toFixed(2);
       console.log("in order summary");
       console.log(this.cart);
     }
@@ -133,8 +142,9 @@ $(document).ready(function() {
     this.name = name;
     this.amount = amt;
     this.total = 0;
+    this.price = 0;
     this.validAmount = function() {
-      return ((this.amount > 0) && (this.amount < 100));
+      return ((this.amount > 0) && (this.amount < 20));
     }
     this.total = function(price) {
       return price*this.amount;
@@ -212,16 +222,17 @@ $(document).ready(function() {
   function addSpiceToCart(spiceName) {
       var amt = $(".text-"+spiceName).val();
       var textf = document.getElementsByClassName("text-"+spiceName)[0];
-      var newOrder = new SpiceOrder(spiceName,amt);     
+      var newOrder = new SpiceOrder(spiceName,amt);
+      console.log(newOrder.validAmount());     
       if (newOrder.validAmount()) {
         spicePrice = myStore.inventory.getSpiceByName(spiceName).price;
-        newOrder.total = parseInt(spicePrice)*amt;
+        newOrder.total = parseFloat(spicePrice)*amt;
+        newOrder.price = parseFloat(spicePrice);
         myStore.cart.addToCart(newOrder);
-        console.log(myStore.cart);
         localStorage.setItem('cart',JSON.stringify(myStore.cart));
       }
       else {
-         alert("Amount must be between 1 and 100");
+         alert("Amount must be between 1 and 20");
       }
   }
 
