@@ -1,3 +1,34 @@
+
+.home-banner__container {
+    width: 90vw;
+    height: 25vh;
+    margin: 10px auto;
+    background-color: $darkred;
+    border-radius: 5px;
+    color: $orange-brown;
+
+    h1 {
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 5em;
+        text-align: center; 
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h2, h3 {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        padding: 0 20px;
+        margin: 5px 30px;
+        float: right;
+        clear: right;
+    }
+}
 .table-container {
     width: 90vw;
     // height: 30vh;

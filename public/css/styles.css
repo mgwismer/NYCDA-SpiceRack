@@ -185,6 +185,28 @@ body {
 a {
   color: #4286f4; }
 
+.home-banner__container {
+  width: 90vw;
+  height: 25vh;
+  margin: 10px auto;
+  background-color: #8c2a07;
+  border-radius: 5px;
+  color: #a35706; }
+  .home-banner__container h1 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 5em;
+    text-align: center; }
+  .home-banner__container h2 {
+    font-size: 1.5em; }
+  .home-banner__container h3 {
+    font-size: 1.5em; }
+  .home-banner__container h2, .home-banner__container h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0 20px;
+    margin: 5px 30px;
+    float: right;
+    clear: right; }
+
 .multi-item-carousel .carousel-inner > .item {
   transition: 500ms ease-in-out left; }
 .multi-item-carousel .carousel-inner .active.left {
@@ -287,6 +309,28 @@ textarea {
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 5px; }
+
+.home-banner__container {
+  width: 90vw;
+  height: 25vh;
+  margin: 10px auto;
+  background-color: #8c2a07;
+  border-radius: 5px;
+  color: #a35706; }
+  .home-banner__container h1 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 5em;
+    text-align: center; }
+  .home-banner__container h2 {
+    font-size: 1.5em; }
+  .home-banner__container h3 {
+    font-size: 1.5em; }
+  .home-banner__container h2, .home-banner__container h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0 20px;
+    margin: 5px 30px;
+    float: right;
+    clear: right; }
 
 .table-container {
   width: 90vw;
