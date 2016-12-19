@@ -142,9 +142,10 @@ body {
 
 .home-banner__container {
   width: 90vw;
-  height: 30vh;
+  height: 25vh;
   margin: 10px auto;
   background-color: #8c2a07;
+  border-radius: 5px;
   color: #a35706; }
   .home-banner__container h1 {
     font-family: 'Aref Ruqaa', serif;
@@ -162,11 +163,27 @@ body {
     clear: right; }
 
 .home-content__container {
-  width: 85vw;
+  width: 90vw;
   margin: 0 auto; }
+  .home-content__container img {
+    float: left;
+    width: 45vw;
+    margin-right: 15px; }
+  .home-content__container h3 {
+    font-size: 1.2em; }
+  .home-content__container p {
+    margin-right: 10px; }
+
+.home-content__text {
+  padding-top: 5px; }
 
 a {
   color: #4286f4; }
+
+#map {
+  height: 40vh;
+  width: 40vw;
+  margin: 20px auto; }
 
 .multi-item-carousel .carousel-inner > .item {
   transition: 500ms ease-in-out left; }
