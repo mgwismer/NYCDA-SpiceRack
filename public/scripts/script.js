@@ -27,11 +27,8 @@ $(document).ready(function() {
     myStore.cart = JSON.parse(cart);   
     console.log(myStore) 
     myStore.displayOrderSummary();
-
     break;
   }  
- 
-
  
   function Store(name) {
     this.name = name;
@@ -221,6 +218,7 @@ $(document).ready(function() {
   
   function addSpiceToCart(spiceName) {
       var amt = $(".text-"+spiceName).val();
+      console.log("amount "+amt);
       var textf = document.getElementsByClassName("text-"+spiceName)[0];
       var newOrder = new SpiceOrder(spiceName,amt);
       console.log(newOrder.validAmount());     
@@ -288,4 +286,4 @@ function dropDownMenu () {
   }
 }
 
-var mainPage = new dropDownMenu();
+//var mainPage = new dropDownMenu();
