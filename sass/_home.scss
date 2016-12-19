@@ -46,11 +46,19 @@
 
 	h3 {
 		font-size: 1.2em;
+		margin: 15px;
 	}
 
 	p {
 		margin-right: 10px;
 	}
+
+	.map {
+	    width: 40vw;
+	    padding: 0;
+	    margin: 10px 5px;
+	}
+
 }
 
 .home-content__text {
@@ -61,9 +69,4 @@ a {
 	color: #4286f4;
 }
 
-#map {
-	height: 40vh;
-    width: 40vw;
-    margin: 20px auto;
-}
 

@@ -170,20 +170,20 @@ body {
     width: 45vw;
     margin-right: 15px; }
   .home-content__container h3 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin: 15px; }
   .home-content__container p {
     margin-right: 10px; }
+  .home-content__container .map {
+    width: 40vw;
+    padding: 0;
+    margin: 10px 5px; }
 
 .home-content__text {
   padding-top: 5px; }
 
 a {
   color: #4286f4; }
-
-#map {
-  height: 40vh;
-  width: 40vw;
-  margin: 20px auto; }
 
 .multi-item-carousel .carousel-inner > .item {
   transition: 500ms ease-in-out left; }
@@ -288,31 +288,25 @@ textarea {
   box-sizing: border-box;
   border-radius: 5px; }
 
-.contact-form {
-  position: relative;
-  top: 60px;
+.table-container {
+  width: 90vw;
+  margin: 10px auto; }
+
+.order-table {
+  width: 70%;
+  margin: 0 auto; }
+  .order-table .table-cat {
+    border: 1px solid black; }
+  .order-table td {
+    font-size: 2em;
+    font-family: "Aref Ruqaa"; }
+
+.table-head {
   background-color: #8c2a07;
-  margin: 5px;
-  padding: 10px; }
-
-#pullquote2 {
-  font-family: 'Ruge Boogie', cursive;
-  font-size: 26pt;
-  display: none;
-  margin: 10px; }
-
-input[type=text] {
-  width: 50%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 5px; }
-
-textarea {
-  height: 100px;
-  width: 75%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 5px; }
+  color: white;
+  text-align: left;
+  padding: 8px;
+  font-size: 2em; }
 
 .thankyou__message {
   position: relative;
