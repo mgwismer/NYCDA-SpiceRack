@@ -1,6 +1,5 @@
-// Instantiate the Bootstrap carousel
 $(document).ready(function() {
- 
+ //Instantiate the Bootstrap carousel
   //In the future make a user site that can input the spices from the site
   var spices_plants = ["cilantro","basil","thyme","rosemary","sage","oregano","tarragon"];
   var spices_seeds = ["cumin","fennel","coriander","mustard","peppercorn","nutmeg"];
