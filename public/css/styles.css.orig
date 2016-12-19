@@ -168,102 +168,31 @@ body {
 a {
   color: #4286f4; }
 
-.multi-item-carousel .carousel-inner > .item {
-  transition: 500ms ease-in-out left; }
-.multi-item-carousel .carousel-inner .active.left {
-  left: -33%; }
-.multi-item-carousel .carousel-inner .active.right {
-  left: 33%; }
-.multi-item-carousel .carousel-inner .next {
-  left: 33%; }
-.multi-item-carousel .carousel-inner .prev {
-  left: -33%; }
+.contact-form {
+  position: relative;
+  top: 60px;
+  background-color: #8c2a07;
+  margin: 5px;
+  padding: 10px; }
 
-.carousel-control {
-  text-shadow: none;
-  opacity: 1;
-  filter: alpha(opacity=100); }
-
-.carousel-control.left, .carousel-control.right {
-  background-image: none !important; }
-
-.spacer-div {
-  height: 100px; }
-
-.div-img {
-  width: 50%;
-  height: 300px;
-  margin: 0px;
-  padding: 0px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 5px solid black; }
-
-.img-responsive {
-  width: 80%;
-  height: 300px;
-  margin: 10px;
-  padding: 10px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 5px solid #a35706; }
-
-.item-spice p {
-  font-size: 1.5em;
-  font-family: "Aref Ruqaa";
-  width: 100%;
-  margin: 0 auto; }
-
-.carousel-control.left .glyphicon {
-  left: 0;
-  margin-left: -10px; }
-
-.carousel-control.right .glyphicon {
-  right: 0;
-  margin-right: 0; }
-
-.carousel-control {
-  height: 50px;
-  color: #8c2a07; }
-
-.textDiv {
-  color: grey;
-  width: 40px;
+#pullquote2 {
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 26pt;
+  display: none;
   margin: 10px; }
 
-body {
-  background: #333;
-  color: #ddd; }
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
 
-h1 {
-  color: white;
-  font-size: 2.25em;
-  text-align: center;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  text-shadow: 0px 2px 0px black; }
-
-.table-container {
-  width: 90vw;
-  margin: 10px auto; }
-
-.order-table {
-  width: 70%;
-  margin: 0 auto; }
-  .order-table .table-cat {
-    border: 1px solid black; }
-  .order-table td {
-    font-size: 2em;
-    font-family: "Aref Ruqaa"; }
-
-.table-head {
-  background-color: #8c2a07;
-  color: white;
-  text-align: left;
-  padding: 8px;
-  font-size: 2em; }
+textarea {
+  height: 100px;
+  width: 75%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 5px; }
 
 .contact-form {
   position: relative;
