@@ -142,9 +142,10 @@ body {
 
 .home-banner__container {
   width: 90vw;
-  height: 30vh;
+  height: 25vh;
   margin: 10px auto;
   background-color: #8c2a07;
+  border-radius: 5px;
   color: #a35706; }
   .home-banner__container h1 {
     font-family: 'Aref Ruqaa', serif;
@@ -162,8 +163,24 @@ body {
     clear: right; }
 
 .home-content__container {
-  width: 85vw;
+  width: 90vw;
   margin: 0 auto; }
+  .home-content__container img {
+    float: left;
+    width: 45vw;
+    margin-right: 15px; }
+  .home-content__container h3 {
+    font-size: 1.2em;
+    margin: 15px; }
+  .home-content__container p {
+    margin-right: 10px; }
+  .home-content__container .map {
+    width: 40vw;
+    padding: 0;
+    margin: 10px 5px; }
+
+.home-content__text {
+  padding-top: 5px; }
 
 a {
   color: #4286f4; }
@@ -245,26 +262,6 @@ h1 {
   margin-bottom: 2em;
   text-shadow: 0px 2px 0px black; }
 
-.table-container {
-  width: 90vw;
-  margin: 10px auto; }
-
-.order-table {
-  width: 70%;
-  margin: 0 auto; }
-  .order-table .table-cat {
-    border: 1px solid black; }
-  .order-table td {
-    font-size: 2em;
-    font-family: "Aref Ruqaa"; }
-
-.table-head {
-  background-color: #8c2a07;
-  color: white;
-  text-align: left;
-  padding: 8px;
-  font-size: 2em; }
-
 .contact-form {
   position: relative;
   top: 60px;
@@ -290,6 +287,26 @@ textarea {
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 5px; }
+
+.table-container {
+  width: 90vw;
+  margin: 10px auto; }
+
+.order-table {
+  width: 70%;
+  margin: 0 auto; }
+  .order-table .table-cat {
+    border: 1px solid black; }
+  .order-table td {
+    font-size: 2em;
+    font-family: "Aref Ruqaa"; }
+
+.table-head {
+  background-color: #8c2a07;
+  color: white;
+  text-align: left;
+  padding: 8px;
+  font-size: 2em; }
 
 .thankyou__message {
   position: relative;

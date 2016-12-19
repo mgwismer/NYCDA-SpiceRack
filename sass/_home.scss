@@ -4,9 +4,10 @@
 
 .home-banner__container {
 	width: 90vw;
-	height: 30vh;
+	height: 25vh;
 	margin: 10px auto;
 	background-color: $darkred;
+	border-radius: 5px;
 	color: $orange-brown;
 
 	h1 {
@@ -30,15 +31,40 @@
 		float: right;
 		clear: right;
 	}
-
 }
 
 .home-content__container {
-	width: 85vw;
+	width: 90vw;
 	margin: 0 auto;
+	
+	img {
+		float: left;
+		width: 45vw;
+		margin-right: 15px;
+	}
 
+	h3 {
+		font-size: 1.2em;
+		margin: 15px;
+	}
+
+	p {
+		margin-right: 10px;
+	}
+
+	.map {
+	    width: 40vw;
+	    padding: 0;
+	    margin: 10px 5px;
+	}
+
+}
+
+.home-content__text {
+	padding-top: 5px;
 }
 
 a {
 	color: #4286f4;
 }
+

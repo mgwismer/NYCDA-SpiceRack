@@ -218,6 +218,7 @@ $(document).ready(function() {
   
   function addSpiceToCart(spiceName) {
       var amt = $(".text-"+spiceName).val();
+      console.log("text-"+spiceName);
       console.log("amount "+amt);
       var textf = document.getElementsByClassName("text-"+spiceName)[0];
       var newOrder = new SpiceOrder(spiceName,amt);
