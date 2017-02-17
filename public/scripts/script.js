@@ -17,14 +17,11 @@ $(document).ready(function() {
     myStore.startStore();
     runCarousel();
     startEventListeners();
-    // console.log(myStore.inventory);
-    console.log(myStore.inventory.plantSpices);
     break;
   case "/order":
     myStore = new Store("order store");
     cart = localStorage.getItem('cart');
     myStore.cart = JSON.parse(cart);   
-    console.log(myStore) 
     myStore.displayOrderSummary();
     break;
   }  
@@ -92,7 +89,6 @@ $(document).ready(function() {
           textDiv.value = "enter amount";
           textDiv.className = "textDiv text-"+spiceCat[i].name;
           $("text-"+spiceCat[i].name).focus();
-          // textDiv.id = "text-"+spiceCat[i].name;
       }
     } 
     this.addToOrders = function(order) {

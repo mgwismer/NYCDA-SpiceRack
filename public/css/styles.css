@@ -266,7 +266,13 @@ a {
 
 .carousel-control {
   height: 50px;
-  color: #8c2a07; }
+  background-color: #8c2a07; }
+
+.btnDiv {
+  background-color: #8c2a07;
+  color: #a35706;
+  border-radius: 5px;
+}
 
 .textDiv {
   color: grey;
