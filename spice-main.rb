@@ -29,7 +29,7 @@ post '/thankyou' do
 
 	from = SendGrid::Email.new(email: @email)
 	subject = "#{@name} has reached out to you on your site!"
-	to = SendGrid::Email.new(email: 'backwardsxmarathon@gmail.com')
+	to = SendGrid::Email.new(email: 'margaretgwismer@gmail.com')
 	content = SendGrid::Content.new(type: 'text/plain', value: @message)
 
 	mail = SendGrid::Mail.new(from, subject, to, content)
